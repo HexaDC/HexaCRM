@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">HexaCRM</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_customer">CustomerActivity</string>
+    <string name="username_">Usuário:</string>
+    <string name="password_">Senha:</string>
+    <string name="logon">Logar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="phone_1_">Tel. Comercial 1:</string>
+    <string name="phone_2_">Tel. Comercial 2:</string>
+    <string name="contact_">Contato:</string>
+    <string name="e_mail_">E-mail:</string>
+    <string name="name_">Nome:</string>
+    <string name="website_">Website:</string>
+    <string name="address_">Endereço:</string>
+    <string name="number_">Número:</string>
+    <string name="postal_code_">CEP:</string>
+    <string name="district_">Bairro:</string>
+    <string name="city_">Cidade:</string>
+    <string name="province_">Estado:</string>
+    <string name="title_activity_result">ResultActivity</string>
+    <string name="search_">Pesquisa:</string>
+    <string name="filter_">Filtro:</string>
+    <string name="search">Pesquisar</string>
+
+</resources>
