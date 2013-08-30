@@ -17,8 +17,9 @@
         
         <FrameLayout
             android:id="@android:id/tabcontent"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.35">
             
             <ScrollView
                 android:id="@+id/scrollSearch"
@@ -30,6 +31,24 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical" >
+                    
+                    <TextView
+	                    android:id="@+id/textFilter"
+	                    android:layout_width="match_parent"
+	                    android:layout_height="wrap_content"
+	                    android:layout_marginLeft="10dp"
+	                    android:layout_marginRight="10dp"
+	                    android:layout_marginTop="20dp"
+	                    android:text="@string/filter_"
+	                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+			        <Spinner
+			            android:id="@+id/spinnerFilter"
+			            android:layout_width="match_parent"
+			            android:layout_height="wrap_content"
+			            android:layout_marginLeft="10dp"
+			            android:layout_marginRight="10dp"
+			            android:layout_marginTop="10dp" />
                     
                     <TextView
 	                    android:id="@+id/textSearch"
@@ -54,24 +73,6 @@
 			            <requestFocus />
         			</EditText>
 			        
-			        <TextView
-	                    android:id="@+id/textFilter"
-	                    android:layout_width="match_parent"
-	                    android:layout_height="wrap_content"
-	                    android:layout_marginLeft="10dp"
-	                    android:layout_marginRight="10dp"
-	                    android:layout_marginTop="20dp"
-	                    android:text="@string/filter_"
-	                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-			        <Spinner
-			            android:id="@+id/spinnerFilter"
-			            android:layout_width="match_parent"
-			            android:layout_height="wrap_content"
-			            android:layout_marginLeft="10dp"
-			            android:layout_marginRight="10dp"
-			            android:layout_marginTop="10dp" />
-			        
 			        <RelativeLayout
 			            android:id="@+id/layoutMainSearch"
 			            android:layout_width="match_parent"
@@ -87,11 +88,12 @@
 			                android:gravity="center_vertical"
 			                android:orientation="horizontal" >
 			                
-			                <Button
-			                    android:id="@+id/buttonSearch"
-			                    android:layout_width="wrap_content"
-			                    android:layout_height="wrap_content"
-			                    android:text="@string/search" />
+			                <ImageView
+			                    android:id="@+id/imageSearch"
+	                            android:layout_width="wrap_content"
+	                            android:layout_height="wrap_content"
+	                            android:contentDescription="@string/todo"
+	                            android:src="@drawable/search" />
 			                
 			            </LinearLayout>
 			            
@@ -113,17 +115,17 @@
                     android:orientation="vertical" >
                 
 	                <TextView
-	                    android:id="@+id/textName"
+	                    android:id="@+id/textCorporate"
 	                    android:layout_width="match_parent"
 	                    android:layout_height="wrap_content"
 	                    android:layout_marginLeft="10dp"
 	                    android:layout_marginRight="10dp"
 	                    android:layout_marginTop="20dp"
-	                    android:text="@string/name_"
+	                    android:text="@string/corporate_"
 	                    android:textAppearance="?android:attr/textAppearanceMedium" />
 		
 			        <EditText
-			            android:id="@+id/editName"
+			            android:id="@+id/editCorporate"
 			            android:layout_width="match_parent"
 			            android:layout_height="wrap_content"
 			            android:layout_marginLeft="10dp"
@@ -378,6 +380,43 @@
             </ScrollView>
             
         </FrameLayout>
+        
+        <LinearLayout
+            android:id="@+id/layoutNavigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+        
+        	<RelativeLayout
+				android:id="@+id/layoutNavigationButtons"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_marginLeft="10dp"
+			    android:layout_marginTop="10dp"
+			    android:layout_marginRight="10dp"
+			    android:layout_marginBottom="10dp" >
+			            
+			    <ImageView
+			        android:id="@+id/imageBack"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentLeft="true"
+			        android:layout_alignParentTop="true"
+			        android:contentDescription="@string/todo"
+			        android:src="@drawable/disable_back" />
+			            
+			    <ImageView
+			        android:id="@+id/imageForward"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentRight="true"
+			        android:layout_alignParentTop="true"
+			        android:contentDescription="@string/todo"
+			        android:src="@drawable/disable_forward" />
+			            
+			</RelativeLayout>
+			        
+        </LinearLayout>
         
     </LinearLayout>
     
